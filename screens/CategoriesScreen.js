@@ -10,11 +10,21 @@ const CategoriesScreen = (props) => {
       <Button
         title="Go to meals"
         onPress={() => {
-          props.navigation.navigate({
-            routeName: "CategoryMeals",
-          });
+          props.navigation.navigate(
+            //one way
+            { routeName: "CategoryMeals" }
+          );
+          //second way
+          // props.navigation.navigate("CategoryMeals")
+
+          //same as navigate
+          // props.navigation.push("CategoryMeals");
+
+          // if  you want to replace the current Componennt on stack with other
+          // so the stack would contain only one Component
+          // props.navigation.replace('CategoryMeals)
         }}
-      ></Button>
+      />
     </View>
   );
 };
